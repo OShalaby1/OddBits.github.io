@@ -1,57 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Line Chart</title>
-    <!-- Include Chart.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Red Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Interactive Line Chart</h1>
+        <div id="logo">
+            <img src="police-badge.png" alt="Police Badge Logo">
+            <h1>Red Website</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+                <li><a href="#section4">Section 4</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section id="line-chart-section">
-            <h2>Line Chart Example</h2>
-            <div id="line-chart-container">
-                <canvas id="myLineChart"></canvas>
-            </div>
+        <section id="section1">
+            <h2>Section 1</h2>
+            <p>This is the first section of the website.</p>
+        </section>
+        <section id="section2">
+            <h2>Section 2</h2>
+            <p>This is the second section of the website.</p>
+        </section>
+        <section id="section3">
+            <h2>Section 3</h2>
+            <p>This is the third section of the website.</p>
+        </section>
+        <section id="section4">
+            <h2>Section 4</h2>
+            <p>This is the fourth section of the website.</p>
         </section>
     </main>
-    
-    <!-- JavaScript for Chart.js -->
-    <script>
-        var ctx = document.getElementById('myLineChart').getContext('2d');
-        var myLineChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
-                datasets: [{
-                    label: 'Data Series',
-                    data: [10, 20, 15, 25, 30],
-                    borderColor: 'rgba(75, 192, 192, 1)', // Line color
-                    borderWidth: 2, // Line width
-                    pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Point color
-                    pointRadius: 5, // Point radius
-                    pointHoverRadius: 7, // Point radius on hover
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                tooltips: {
-                    enabled: true,
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true,
-                },
-            }
-        });
-    </script>
+    <div id="scrolling-image">
+        <img src="large-image.jpg" alt="Large Scrolling Image">
+    </div>
 </body>
 </html>
