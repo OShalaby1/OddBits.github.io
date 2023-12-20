@@ -1,74 +1,43 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Website Template</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Interactive Pie Chart</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <h1>Cool Website Template</h1>
+        <h1>Interactive Pie Chart</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="section1" class="section">
-            <div class="content">
-                <h2>Section 1</h2>
-                <p>This is the first section of your cool website.</p>
-            </div>
-        </section>
-        <section id="section2" class="section">
-            <div class="content">
-                <h2>Section 2</h2>
-                <p>Scroll down to see the cool scroll effect.</p>
-            </div>
-        </section>
-        <section id="section3" class="section">
-           
-            <div class="content">
-                 <div id="pie-chart-container">
-            <canvas id="myPieChart"></canvas>
-            </div>
-
-                <h2>Section 3</h2>
-                <p>Here's an interactive graph:</p>
-                <div id="interactive-graph">
-                    <!-- You can add your interactive graph here -->
-                </div>
+        <section id="pie-chart-section">
+            <h2>Pie Chart Example</h2>
+            <div id="pie-chart-container">
+                <canvas id="myPieChart"></canvas>
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
+    
+    <!-- JavaScript for Chart.js -->
+    <script>
+        var ctx = document.getElementById('myPieChart').getContext('2d');
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Label 1', 'Label 2', 'Label 3'],
+                datasets: [{
+                    data: [30, 40, 30], // Data values
+                    backgroundColor: ['red', 'green', 'blue'], // Colors for each segment
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-<script>
-    var ctx = document.getElementById('myPieChart').getContext('2d');
-    var myPieChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Label 1', 'Label 2', 'Label 3'],
-            datasets: [{
-                data: [30, 40, 30], // Data values
-                backgroundColor: ['red', 'green', 'blue'], // Colors for each segment
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-        }
-    });
-</script>
-
