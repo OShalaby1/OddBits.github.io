@@ -30,8 +30,34 @@ nav ul li a {
 }
 
 /* Style the main content section */
-main {
+.main {
+    position: relative;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.content {
+    text-align: center;
     padding: 2rem;
+}
+
+/* Add background colors to sections */
+#section1 {
+    background-color: #f0f0f0;
+}
+
+#section2 {
+    background-color: #e0e0e0;
+}
+
+#section3 {
+    background-color: #d0d0d0;
 }
 
 /* Style the footer */
@@ -40,4 +66,11 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+/* Add custom styles for your interactive graph */
+#interactive-graph {
+    width: 80%;
+    margin: 0 auto;
+    /* Add your graph styles here */
 }
