@@ -1,43 +1,60 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Pie Chart</title>
+    <title>Interactive Line Chart</title>
     <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <h1>Interactive Pie Chart</h1>
+        <h1>Interactive Line Chart</h1>
     </header>
     <main>
-        <section id="pie-chart-section">
-            <h2>Pie Chart Example</h2>
-            <div id="pie-chart-container">
-                <canvas id="myPieChart"></canvas>
+        <section id="line-chart-section">
+            <h2>Line Chart Example</h2>
+            <div id="line-chart-container">
+                <canvas id="myLineChart"></canvas>
             </div>
         </section>
     </main>
     
     <!-- JavaScript for Chart.js -->
     <script>
-        var ctx = document.getElementById('myPieChart').getContext('2d');
-        var myPieChart = new Chart(ctx, {
-            type: 'pie',
+        var ctx = document.getElementById('myLineChart').getContext('2d');
+        var myLineChart = new Chart(ctx, {
+            type: 'line',
             data: {
-                labels: ['Label 1', 'Label 2', 'Label 3'],
+                labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
                 datasets: [{
-                    data: [30, 40, 30], // Data values
-                    backgroundColor: ['red', 'green', 'blue'], // Colors for each segment
+                    label: 'Data Series',
+                    data: [10, 20, 15, 25, 30],
+                    borderColor: 'rgba(75, 192, 192, 1)', // Line color
+                    borderWidth: 2, // Line width
+                    pointBackgroundColor: 'rgba(75, 192, 192, 1)', // Point color
+                    pointRadius: 5, // Point radius
+                    pointHoverRadius: 7, // Point radius on hover
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                tooltips: {
+                    enabled: true,
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true,
+                },
             }
         });
     </script>
 </body>
 </html>
+
+
