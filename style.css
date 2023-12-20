@@ -1,76 +1,64 @@
 /* Reset some default styles for consistency */
-body, h1, h2, ul {
+body, h1, h2, ul, p {
     margin: 0;
     padding: 0;
 }
 
 /* Basic styling for the header */
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+    background-color: #FF0000; /* Red color */
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
 }
 
-/* Style the navigation menu */
+#logo img {
+    width: 50px; /* Adjust the size of the logo */
+    margin-right: 10px;
+}
+
 nav ul {
     list-style-type: none;
-    background-color: #444;
-    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 10px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #FFF;
+    font-weight: bold;
 }
 
 /* Style the main content section */
-.main {
-    position: relative;
-}
-
-.section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-}
-
-.content {
-    text-align: center;
+main {
     padding: 2rem;
+    background-color: #FFCCCC; /* Light red background */
 }
 
-/* Add background colors to sections */
-#section1 {
-    background-color: #f0f0f0;
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #FFE5E5; /* Lighter red background for sections */
+    border: 1px solid #FF0000; /* Red border for sections */
 }
 
-#section2 {
-    background-color: #e0e0e0;
-}
-
-#section3 {
-    background-color: #d0d0d0;
-}
-
-/* Style the footer */
-footer {
-    background-color: #333;
-    color: #fff;
+/* Styling for the scrolling image */
+#scrolling-image {
     text-align: center;
-    padding: 1rem;
+    margin: 20px 0;
+    overflow: hidden;
 }
 
-/* Add custom styles for your interactive graph */
-#interactive-graph {
-    width: 80%;
-    margin: 0 auto;
-    /* Add your graph styles here */
+#scrolling-image img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+#scrolling-image:hover img {
+    transform: scale(1.1);
 }
