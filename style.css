@@ -27,6 +27,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
+    font-size: 18px; /* Larger font size */
+    transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+nav ul li a:hover {
+    font-size: 22px; /* Increase font size on hover */
 }
 
 #hero {
