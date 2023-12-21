@@ -1,26 +1,22 @@
-/* Reset some default styles for consistency */
-body, h1, h2, ul, p {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #fff;
 }
 
-/* Basic styling for the header */
 header {
-    background-color: #FF0000; /* Red color */
-    color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-}
-
-#logo img {
-    width: 50px; /* Adjust the size of the logo */
-    margin-right: 10px;
+    background-color: #f8f8f7;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
 }
 
 nav ul li {
@@ -30,35 +26,25 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #FFF;
-    font-weight: bold;
+    color: #333;
 }
 
-/* Style the main content section */
-main {
-    padding: 2rem;
-    background-color: #FFCCCC; /* Light red background */
-}
-
-section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #FFE5E5; /* Lighter red background for sections */
-    border: 1px solid #FF0000; /* Red border for sections */
-}
-
-/* Styling for the scrolling image */
-#scrolling-image {
+#hero {
+    background-color: #eee;
     text-align: center;
-    margin: 20px 0;
-    overflow: hidden;
+    padding: 50px 20px;
 }
 
-#scrolling-image img {
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #f8f8f7;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    transition: transform 0.5s ease-in-out;
-}
-
-#scrolling-image:hover img {
-    transform: scale(1.1);
 }
